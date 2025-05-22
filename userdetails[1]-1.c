@@ -115,7 +115,7 @@ void ordering()
     float total;
     total=bill+(bill*0.05);
     
-    printf("Dear Customer your final bill is:Rs %.2f\n",total);
+    printf("Dear Customer your final bill along with GSTis:Rs %.2f\n",total);
     printf("Thank You For Ordering & Do Order Again!\n");
 }
 
