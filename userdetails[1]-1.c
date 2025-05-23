@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-#include<Stdlib.h>
+#include<stdlib.h>
 
 
 void user(char name[])
 {
+    printf("=============================================\n");
     printf("Welcome to Our Online Ordering System!\n");
+     printf("=============================================\n");
     printf("Enter your name: ");
     fgets(name, 20, stdin);
     name[strcspn(name, "\n")] = '\0';
@@ -16,7 +18,7 @@ void ordering()
 {
     int bill=0;
     int price_array[11] = {260, 270, 280, 225, 270,220,100,240,250,270};
-    char *m[11] = {"Hummus & Bell Pepper Wrap(VEG)", "Devilled Egg & Sandwiched Wrap(NON-VEG)", "Peri-Peri Chicken Wrap(NON-VEG)", "Estelle Snadwich(VEG)", "Olive & Feta Cheese Wrap(VEG)","Salted Caramel Cream Cup(VEG)", "Gadbad Ice Cream (VEG)","Salted Fries(VEG)", "Cajun Spiced Fries(VEG)", "Hummus with Olives and Toasted Bread(VEG)"};
+    char *m[11] = {"Hummus & Bell Pepper Wrap(VEG)", "Devilled Egg & Sandwiched Wrap(NON-VEG)", "Peri-Peri Chicken Wrap(NON-VEG)", "Estelle Sandwich(VEG)", "Olive & Feta Cheese Wrap(VEG)","Salted Caramel Cream Cup(VEG)", "Gadbad Ice Cream (VEG)","Salted Fries(VEG)", "Cajun Spiced Fries(VEG)", "Hummus with Olives and Toasted Bread(VEG)"};
     int id = 1;
     int userorders[11] = {0};
     while (id) {
@@ -38,7 +40,7 @@ void ordering()
             printf("Exiting\n");
         }
     }
-    printf("\nOrder Summary:\n");
+     printf("\n=============== Order Summary ===============\n");
     for (int i = 0; i < 10; i++) 
     {
         if (userorders[i] > 0) {
@@ -114,9 +116,10 @@ void ordering()
      }
     float total;
     total=bill+(bill*0.05);
-    
+     printf("----------------------------------------\n");
     printf("Dear Customer your final bill along with GST is:Rs %.2f\n",total);
     printf("Thank You For Ordering & Do Order Again!\n");
+    printf("****************************************\n");
 }
 
 
