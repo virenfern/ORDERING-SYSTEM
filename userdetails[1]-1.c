@@ -93,20 +93,20 @@ void ordering()
             if(userorders[i]<=2)
             {
              q=((price_array[i] * userorders[i])+10);
-             bill=bill+ ((price_array[i] * userorders[i])+10);
+             bill=bill+q;
              printf("Item:%s / Number of Items:%d  / Amount:Rs.%d\n",m[i],userorders[i],q);
                
             }
             else if(userorders[i]>2)
             {
              q=((price_array[i] * userorders[i])+25);
-             bill= bill+((price_array[i] * userorders[i])+25);
+             bill= bill+q;
              printf("Item:%s / Number of Items:%d  / Amount:Rs.%d\n",m[i],userorders[i],q);
             }
             else
             {
              q=((price_array[i] * userorders[i])+50);
-             bill=bill+((price_array[i] * userorders[i])+50);
+             bill=bill+q;
              printf("Item:%s / Number of Items:%d  / Amount:Rs.%d\n",m[i],userorders[i],q);
             }
         }
